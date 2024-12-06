@@ -1,0 +1,18 @@
+<section>
+    <div>
+        <input type="text" class="input-text" placeholder="Busque pelo livro aqui..." [(ngModel)]="bookSearched">
+        <button (click)="searchBooks()"> <img src="./assets/icons/lupa.png" alt="lupa"></button>
+    </div>
+
+    <h2 class="erro" *ngIf="mensagemErro">{{mensagemErro}}</h2>
+    <div *ngIf="!booksItens.length; else listBooks">
+        <img class="imagem" src="../../../assets/imgs/undraw_books_re_8gea.svg" alt="pessoa lendo" srcset="">
+    </div>
+
+    <ng-template #listBooks>
+        <div class="cards">
+            <app-card-books *ngFor="let itens of booksItens" [itensBooks]="itens"></app-card-books>
+        </div>
+    </ng-template>
+    
+</section>

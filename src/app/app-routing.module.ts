@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SearchBookComponent } from './view/search-book/search-book.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: "", component: SearchBookComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

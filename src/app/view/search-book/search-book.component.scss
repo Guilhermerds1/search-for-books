@@ -1,0 +1,63 @@
+section{
+    width: 100%;
+
+    div{
+        margin: 60%;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        padding-top: 150px;
+
+        .input-text{
+            width: 300px;
+            height: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        button{
+            background: none;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            margin: 0px 5px;
+
+            img{
+                width: 20px;
+            }
+        }
+    }
+
+    .imagem{
+        width: 300px;
+    }
+
+
+    .cards{
+        width: 350px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+
+
+        @media only screen and (max-width: 900px) {  
+        width: 350px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+}
+    
+}
+
+.erro{
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+
+
+
