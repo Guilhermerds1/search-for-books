@@ -8,10 +8,11 @@ import { VolumeInfo } from 'src/app/modules/book';
 })
 export class CardBooksComponent implements OnInit{
   @Input() public itensBooks: VolumeInfo | undefined;
+  public imagem: string = ""
   constructor(){}
 
   ngOnInit(): void {
-    console.log(this.itensBooks);
+    this.imagem = this.itensBooks?.imageLinks?.thumbnail || "";
   }
   
 }
