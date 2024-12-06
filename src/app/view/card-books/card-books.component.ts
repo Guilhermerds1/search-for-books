@@ -12,7 +12,10 @@ export class CardBooksComponent implements OnInit{
   constructor(){}
 
   ngOnInit(): void {
-    this.imagem = this.itensBooks?.imageLinks?.thumbnail || "";
+    let imagemUrl = this.itensBooks?.imageLinks.thumbnail || "";
+    
+    // Substituir "http://" por "https://"
+    this.imagem = imagemUrl.replace('http://', 'https://');
   }
   
 }
