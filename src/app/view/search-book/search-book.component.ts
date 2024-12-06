@@ -16,6 +16,7 @@ export class SearchBookComponent {
 
   searchBooks(){
     this.booksItens = [];
+    this.mensagemErro = "";
     // this.booksService.getBooks(this.bookSearched).subscribe({
     //   next: (resultadoPesquisa) => {
     //     this.configureVolumesItens(resultadoPesquisa);
